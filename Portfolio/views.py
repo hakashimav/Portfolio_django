@@ -8,7 +8,9 @@ import os
 # Create your views here.
 def index(request):
 
-    context = {}
+    context = {
+        'home':"home"
+    }
 
     template = loader.get_template('index.html')
     return HttpResponse(template.render(context, request))
@@ -16,21 +18,27 @@ def index(request):
 
 def about(request):
     
-    context = {}
+    context = {
+        'about':"About"
+    }
 
     template = loader.get_template('about.html')
     return HttpResponse(template.render(context, request))
 
 def service(request):
     
-    context = {}
+    context = {
+        'service':"Service"
+    }
 
     template = loader.get_template('service.html')
     return HttpResponse(template.render(context, request))
 
 def realisation(request):
     
-    context = {}
+    context = {
+        'realisation':"Realisation"
+    }
 
     template = loader.get_template('realisation.html')
     return HttpResponse(template.render(context, request))
