@@ -24,7 +24,7 @@
             {%if about %}
                 <a href="#about">{{ about }}</a>
             {%else%}
-                <a href="#about">About</a>
+                <a href="#about">A propos</a>
             {%endif%}
             {%if service%}
                 <a href="#education">{{ service }}</a>
@@ -34,7 +34,7 @@
             {%if realisation%}
                 <a href="#skills">{{ realisation }}</a>
             {%else%}
-                <a href="#skills">Skills</a>
+                <a href="#skills">Compétences</a>
             {%endif%}
             <a href="#contact">Contact</a>
 
@@ -46,21 +46,20 @@
     <!-- home section design -->
     <section class="home show-animate" id="home">
         <div class="home-content">
-            <h1>Hi, I'm <span>Mich Mav</span><span class="animate" style="--i:2"></span></h1>
+            <h1>Mon Nom, Est<span>Mich Mav</span><span class="animate" style="--i:2"></span></h1>
             <div class="text-animate">
-                <h3>Frontend Developer</h3>
+                <h3>Développeur full-stack junior</h3>
                 <span class="animate" style="--i:3"></span>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quia, 
-                voluptate cumque ratione deleniti 
-                nam accusantium voluptatibus omnis harum? Nisi, quisquam tempore? Neque illum magnam 
-                debitis minus?
+            <p>Développer des applications web ou mobile etc. Intéressants avec du contenu qui dionne 
+                envie n'est pas forcément facile quand ce n'est pas notre métier. 
+                Heureusement pour vous, c'est le mien. Alors n'hésitez pas à <a href="#contact">me contacter</a>
                 <span class="animate" style="--i:4"></span>
             </p>
 
             <div class="btn-box">
-                <a href="{% url 'realisation'%}" class="btn">Hire me</a>
-                <a href="{% url 'service'%}" class="btn">Let's Talk</a>
+                <a href="{% url 'realisation'%}" class="btn">Mes Réalisation</a>
+                <a href="{% url 'service'%}" class="btn">Mes Services</a>
                 <span class="animate" style="--i:5"></span>
             </div>
         </div>
@@ -82,16 +81,16 @@
 
     <!-- contact section design -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1"></span></h2>
+        <h2 class="heading">Contactez <span>Moi!</span><span class="animate scroll" style="--i:1"></span></h2>
 
         <form action="#">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Votre Nom" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" required>
+                    <input type="text" placeholder="Votre Email" required>
                     <span class="focus"></span>
                 </div>
 
@@ -100,11 +99,11 @@
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Mobile number" required>
+                    <input type="number" placeholder="Votre Numéro" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
+                    <input type="text" placeholder="Sujet" required>
                     <span class="focus"></span>
                 </div>
 
@@ -112,14 +111,14 @@
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"  required></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Votre Message"  required></textarea>
                 <span class="focus"></span>
 
                 <span class="animate scroll" style="--i:7"></span>
             </div>
 
             <div class="btn-box btns">
-                <button type="submit" class="btn">Sumbit</button>
+                <button type="submit" class="btn">Envoyer</button>
 
                 <span class="animate scroll" style="--i:9"></span>
             </div>
