@@ -931,7 +931,7 @@ section:nth-child(odd) .animate.scroll,
     65%,
     78%,
     85% {
-        width: 90%;
+        width: 100%;
         opacity: 1;
     }
 
