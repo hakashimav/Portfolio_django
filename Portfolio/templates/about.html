@@ -1,0 +1,28 @@
+{%block section %}
+
+    <!-- about section desing -->
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1"></span></h2>
+
+        <div class="about-img">
+            <img src="{%static 'img/about.jpg'%}" alt="">
+            <span class="circle-spin"></span>
+            <span class="animate scroll" style="--i:2"></span>
+        </div>
+
+        <div class="about-content">
+            <h3>Frontend Developer<span class="animate scroll" style="--i:3"></span></h3>
+            <p>Développer des applications web ou mobile etc. Intéressants avec du contenu qui donne envie 
+                n'est pas forcément facile quand ce n'est pas notre métier. 
+                Heureusement pour vous, c'est le mien. Alors n'hésitez pas à me contacter
+                <span class="animate scroll" style="--i:4"></span>
+            </p>
+
+            <div class="btn-box btns">
+                <a href="{% url 'about'%}" class="btn">Read More</a>
+                <span class="animate scroll" style="--i:5"></span>
+            </div>
+        </div>
+    </section>
+
+{%endblock%}
