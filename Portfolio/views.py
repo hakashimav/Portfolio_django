@@ -3,7 +3,10 @@ from django.template import loader
 from django.template.response import TemplateResponse
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 from django.http import Http404
-import os
+
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core.mail import EmailMultiAlternatives
 
 # Create your views here.
 def index(request):
@@ -42,3 +45,10 @@ def realisation(request):
 
     template = loader.get_template('realisation.html')
     return HttpResponse(template.render(context, request))
+
+def contact(request):
+
+    subject, from_email, to = request.POST.get('subject',""), request.POST.get('from_email',""), "michmav28@gmail.com"
+    text_content = request.POST.get('message',"")
+    msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+    msg.send()

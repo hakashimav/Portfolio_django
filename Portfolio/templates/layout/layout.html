@@ -83,14 +83,15 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contactez <span>Moi!</span><span class="animate scroll" style="--i:1"></span></h2>
 
-        <form action="#">
+        <form action="{%url 'contact'%}" method="POST">
+            {%csrf_token%}
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Votre Nom" required>
+                    <input type="text" placeholder="Votre Nom" name="nom" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Votre Email" required>
+                    <input type="text" placeholder="Votre Email" name="from_email" required>
                     <span class="focus"></span>
                 </div>
 
@@ -99,11 +100,11 @@
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Votre Numéro" required>
+                    <input type="number" placeholder="Votre Numéro" name="numero" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Sujet" required>
+                    <input type="text" placeholder="Sujet" name="subject" required>
                     <span class="focus"></span>
                 </div>
 
@@ -111,7 +112,7 @@
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Votre Message"  required></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Votre Message"  name="message" required></textarea>
                 <span class="focus"></span>
 
                 <span class="animate scroll" style="--i:7"></span>
