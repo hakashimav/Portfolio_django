@@ -483,6 +483,10 @@ span {
     overflow: hidden;
 }
 
+.img-realisation {
+    width: 90%;
+}
+
 .skills-box .skills-content::before {
     content: '';
     position: absolute;
