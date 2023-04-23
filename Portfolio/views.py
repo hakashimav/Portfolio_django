@@ -25,7 +25,7 @@ def about(request):
         'about':"About"
     }
 
-    template = loader.get_template('about.html')
+    template = loader.get_template('pages/about.html')
     return HttpResponse(template.render(context, request))
 
 def service(request):
@@ -34,7 +34,7 @@ def service(request):
         'service':"Service"
     }
 
-    template = loader.get_template('service.html')
+    template = loader.get_template('pages/service.html')
     return HttpResponse(template.render(context, request))
 
 def realisation(request):
@@ -43,7 +43,7 @@ def realisation(request):
         'realisation':"Realisation"
     }
 
-    template = loader.get_template('realisation.html')
+    template = loader.get_template('pages/realisation.html')
     return HttpResponse(template.render(context, request))
 
 def contact(request):
