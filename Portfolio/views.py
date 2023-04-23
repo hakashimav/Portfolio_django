@@ -10,6 +10,7 @@ from django.core.mail import EmailMultiAlternatives
 
 from datetime import datetime
 
+from django.core.mail import EmailMessage
 # Create your views here.
 def index(request):
 
@@ -49,3 +50,27 @@ def realisation(request):
     return HttpResponse(template.render(context, request))
 
 
+def contact(request):
+
+    nom = request.POST['nom']
+    from_email = request.POST['from_email']
+    numero = request.POST['numero']
+    subject = request.POST['subject']
+    message = request.POST.get('message',"")
+
+    email = EmailMessage()
+
+    email.subject = subject
+    email.body = message
+    email.from_email = from_email
+    email.to = 'michmav28@gmail.com'
+    email.extra_headers = nom, numero
+    email.reply_to = from_email
+
+    context = {
+        'send':'message envoyer'
+    }
+
+
+    template = loader.get_template('index.html')
+    return HttpResponse(template.render(context, request))

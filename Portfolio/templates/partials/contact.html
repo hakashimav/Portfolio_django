@@ -39,7 +39,9 @@
 
         <div class="btn-box btns">
             <button type="submit" class="btn">Envoyer</button>
-
+            {%if send%}
+                <p>{{ send }}</p>
+            {%endif%}
             <span class="animate scroll" style="--i:9"></span>
         </div>
     </form>
