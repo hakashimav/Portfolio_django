@@ -15,7 +15,7 @@ from django.core.mail import EmailMessage
 def index(request):
 
     context = {
-        'home':"home"
+        'home':"Home"
     }
 
     template = loader.get_template('index.html')
@@ -25,7 +25,7 @@ def index(request):
 def about(request):
     
     context = {
-        'about':"About"
+        'about':"A propos"
     }
 
     template = loader.get_template('pages/about.html')
@@ -68,7 +68,7 @@ def contact(request):
     email.reply_to = from_email
 
     context = {
-        'send':'message envoyé'
+        'send':'Message envoyé'
     }
 
 

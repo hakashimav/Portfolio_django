@@ -10,10 +10,10 @@
 }
 
 :root {
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
+    --bg-color: #16161d;
+    --second-bg-color: #15151e;
     --text-color: #ededed;
-    --main-color: #00abf0;
+    --main-color: #808085;
 }
 
 html {
@@ -86,7 +86,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    /* background: url(/img/about.jpg) no-repeat; */
+    background: url(../img/space.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
