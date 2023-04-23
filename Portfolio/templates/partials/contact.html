@@ -1,7 +1,9 @@
  <!-- contact section design -->
  <section class="contact" id="contact">
     <h2 class="heading">Contactez <span>Moi!</span><span class="animate scroll" style="--i:1"></span></h2>
-
+    {%if send%}
+        <p class="heading" style="color: green;">{{ send }}</p>
+    {%endif%}
     <form action="{%url 'contact'%}" method="POST">
         {%csrf_token%}
         <div class="input-box">
@@ -39,9 +41,7 @@
 
         <div class="btn-box btns">
             <button type="submit" class="btn">Envoyer</button>
-            {%if send%}
-                <p>{{ send }}</p>
-            {%endif%}
+
             <span class="animate scroll" style="--i:9"></span>
         </div>
     </form>

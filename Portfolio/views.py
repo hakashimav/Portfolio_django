@@ -68,7 +68,7 @@ def contact(request):
     email.reply_to = from_email
 
     context = {
-        'send':'message envoyer'
+        'send':'message envoyé'
     }
 
 
