@@ -55,9 +55,25 @@
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
         </div>
+        <h1 class="h2">Ajouter une image</h1>
+
+        <form action="" method="post">
+            {% csrf_token%}
+            <div class="form-group">
+              <label for="name">Name entreprise</label>
+              <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="image">Image</label>
+              <input type="file" class="form-control-file" name="image" id="image" placeholder="" aria-describedby="fileHelpId">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" >Envoyer</button>
+        </form>
 
         <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-        
+
         </main>
 
 
