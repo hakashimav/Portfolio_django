@@ -57,7 +57,7 @@
         </div>
         <h1 class="h2">Ajouter une image</h1>
 
-        <form action="" method="post">
+        <form action="{% url 'upload' %}" method="post">
             {% csrf_token%}
             <div class="form-group">
               <label for="name">Name entreprise</label>
